@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Paginator">
+        <attr name="buttonColor" format="color"/>
+        <attr name="buttonColorActive" format="color"/>
+        <attr name="textColor" format="color"/>
+        <attr name="textColorActive" format="color"/>
+        <attr name="iconNext" format="reference"/>
+        <attr name="iconPrev" format="reference"/>
+        <attr name="buttonWidth" format="dimension"/>
+        <attr name="buttonHeight" format="dimension"/>
+    </declare-styleable>
+</resources>

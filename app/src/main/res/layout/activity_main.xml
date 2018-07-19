@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <in.mrasif.app.lib.pagination.Paginator
+        android:id="@+id/pnPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#801e1e"
+        app:buttonWidth="45dp"
+        app:buttonHeight="45dp"
+        app:buttonColor="#801e1e"
+        app:buttonColorActive="#a45959"
+        app:textColor="#000000"
+        app:textColorActive="#000000"
+        app:iconNext="@drawable/ic_navigate_next_black_24dp"
+        app:iconPrev="@drawable/ic_navigate_before_black_24dp" />
+
+</LinearLayout>
