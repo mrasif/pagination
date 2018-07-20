@@ -106,7 +106,7 @@ public class MainActivity extends AppCompatActivity implements PageClickListener
     }
 
     @Override
-    public void onPageClick(int page) {
+    public void onPageClick(View view, int page) {
         Toast.makeText(this, "Page: "+page, Toast.LENGTH_SHORT).show();
         pnPager.setPages(pages,page);
     }
