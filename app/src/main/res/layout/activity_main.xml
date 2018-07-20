@@ -18,7 +18,7 @@
         app:buttonColorActive="#a45959"
         app:textColor="#000000"
         app:textColorActive="#000000"
-        app:iconNext="@drawable/ic_navigate_next_black_24dp"
-        app:iconPrev="@drawable/ic_navigate_before_black_24dp" />
+        app:iconNext="@drawable/next"
+        app:iconPrev="@drawable/prev"/>
 
 </LinearLayout>

@@ -8,7 +8,8 @@
         android:id="@+id/btnPrev"
         android:layout_width="45dp"
         android:layout_height="45dp"
-        android:background="#DDDDDD" />
+        android:background="#DDDDDD"
+        android:src="@drawable/prev"/>
 
     <HorizontalScrollView
         android:id="@+id/hsv"
@@ -26,5 +27,6 @@
         android:id="@+id/btnNext"
         android:layout_width="45dp"
         android:layout_height="45dp"
-        android:background="#DDDDDD" />
+        android:background="#DDDDDD"
+        android:src="@drawable/next"/>
 </LinearLayout>

@@ -160,13 +160,23 @@ public class Paginator extends LinearLayout {
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-        if (current==1){
-            hsv.scrollTo(0, (int)hsv.getScrollY());
-        }
-        int buttonWidth=llPages.getMeasuredWidth()/pages.size();
-        System.out.println(buttonWidth);
-        hsv.scrollTo((current-1) * (buttonWidth), (int)hsv.getScrollY());
+
+        int widthS=hsv.getMeasuredWidth();
+        int widthL=llPages.getMeasuredWidth();
+
+        int xD=(widthL-widthS)/pages.size();
+
+        int xS=(widthS/2)/pages.size();
+        int xL=widthL/pages.size();
+
+//        int sx=(current-1) * (xL-xS);
+        int sx=(current-1) * (xS+xD);
+
+
+        hsv.scrollTo(sx, hsv.getScrollY());
     }
+
+
 
     private Button getButton() {
         Button button = (Button) LayoutInflater.from(getContext()).inflate(R.layout.button_page, null, false);
