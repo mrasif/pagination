@@ -114,7 +114,7 @@ public class Paginator extends LinearLayout {
             public void onClick(View v) {
                 int next=current+1;
                 if (next<=pages.size() && null!=listener){
-                    listener.onPageClick(next);
+                    listener.onPageClick(Paginator.this, next);
                 }
             }
         });
@@ -124,7 +124,7 @@ public class Paginator extends LinearLayout {
             public void onClick(View v) {
                 int prev=current-1;
                 if (prev>0 && null!=listener){
-                    listener.onPageClick(prev);
+                    listener.onPageClick(Paginator.this, prev);
                 }
             }
         });
@@ -149,7 +149,7 @@ public class Paginator extends LinearLayout {
                 @Override
                 public void onClick(View v) {
                     if (null != listener && current != page) {
-                        listener.onPageClick(page);
+                        listener.onPageClick(Paginator.this, page);
                     }
                 }
             });

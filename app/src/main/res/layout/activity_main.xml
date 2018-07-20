@@ -8,7 +8,7 @@
     android:orientation="vertical">
 
     <in.mrasif.app.lib.pagination.Paginator
-        android:id="@+id/pnPager"
+        android:id="@+id/paginator1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#801e1e"
@@ -20,5 +20,20 @@
         app:textColorActive="#000000"
         app:iconNext="@drawable/next"
         app:iconPrev="@drawable/prev"/>
+
+    <in.mrasif.app.lib.pagination.Paginator
+        android:id="@+id/paginator2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#d97015"
+        app:buttonWidth="45dp"
+        app:buttonHeight="45dp"
+        app:buttonColor="#d97015"
+        app:buttonColorActive="#895324"
+        app:textColor="#000000"
+        app:textColorActive="#000000"
+        app:iconNext="@drawable/next"
+        app:iconPrev="@drawable/prev"
+        android:layout_marginTop="20dp"/>
 
 </LinearLayout>
