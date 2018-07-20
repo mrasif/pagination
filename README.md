@@ -17,7 +17,7 @@ dependencies {
         compile 'com.github.mrasif:pagination:v1.0.1'
 }
 ```
-### For Gradle:
+### For Maven:
 Step 1. Add the JitPack repository to your build file:
 ```
 <repositories>
