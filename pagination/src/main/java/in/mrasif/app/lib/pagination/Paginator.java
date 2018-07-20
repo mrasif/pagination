@@ -7,16 +7,19 @@ import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
+import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -152,24 +155,17 @@ public class Paginator extends LinearLayout {
             });
             llPages.addView(button);
         }
-
-
-//        Button btnChild=(Button) llPages.getChildAt(current-1);
-//        System.out.println(hsv.getScrollX());
-//        hsv.scrollTo(btnChild.getWidth()*current,btnChild.getTop());
-
-
     }
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-//        int scrollWidth=buttonWidth+hsv.getLeft();
-//        if (scrollWidth==0){
-//            scrollWidth=1;
-//        }
-//        System.out.println("Scroll: "+hsv.getMeasuredWidth()+"\t Button: "+scrollWidth);
-//        hsv.scrollTo(scrollWidth*current,0);
+        if (current==1){
+            hsv.scrollTo(0, (int)hsv.getScrollY());
+        }
+        int buttonWidth=llPages.getMeasuredWidth()/pages.size();
+        System.out.println(buttonWidth);
+        hsv.scrollTo((current-1) * (buttonWidth), (int)hsv.getScrollY());
     }
 
     private Button getButton() {
